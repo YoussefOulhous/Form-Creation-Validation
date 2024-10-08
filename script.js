@@ -6,18 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleSubmit(event) {
         event.preventDefault(); // Prevent default form submission
 
-        const userName = document.getElementById('username').value.trim();
+        const username = document.getElementById('username').value.trim();
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
         let isValid = true;
         let messages = [];
 
-        if(!userName){
+        if(!username){
             isValid = false;
             messages.push("Username is required.")
         }
-        else if( userName.length < 3){
+        else if(username.length < 3){
             isValid = false;
             messages.push('Username length is less than 3. ')
         }
